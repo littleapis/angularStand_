@@ -1,0 +1,16 @@
+{
+  "name": "angular-recommeded",
+  "version": "0.0.1",
+  "private": true,
+  "description":"±ê×¼Àý×Ó",
+  "license":"MIT",
+  "devDependencies":{
+    "http-server":"^0.6.1",
+    "bower":"^1.3.1"
+  },
+  "scripts":{
+    "postinstall":"bower install",
+    "prestart":"npm install",
+    "start":"http-server -p 8000"
+  }
+}
