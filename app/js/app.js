@@ -1,13 +1,9 @@
-var mainApp = angular.module('mainApp',['ngRoute','bookStoreCtrls']);
+var mainApp = angular.module('mainApp',[]);
 
-mainApp.config(function($routeProvider){
-    $routeProvider.when('/hello',function(){
-        templateUrl: 'tpls/hello.html';
-        controller : 'helloCtrl';
-    }).when('/list',function(){
-        templateUrl: 'tpls/bookList.html';
-        controller : 'bookListCtrl';
-    }).otherwise({
-        redirectTo:'/hello'
-    })
-});
+mainApp.controller('UserInfoCtrl',['$scope',function($scope){
+	$scope.userInfo={
+		email:'12312312@qq.com',
+		password:123456,
+		autoLogin:true
+	}
+}])

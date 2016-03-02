@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html ng-app="mainApp">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <script src="framework/angular1.4.8/angular.js"></script>
-    <script src="framework/angular1.4.8/angular-route.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/fillters.js"></script>
-    <script src="js/servers.js"></script>
-    <script src="js/directives.js"></script>
-</head>
-<body>
-    <div ng-view>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script src="framework/angular1.4.8/angular.js"></script>
+        <script src="js/app.js"></script>
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    </head>
+    <body>
+        <div class="panel panel-preimary">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    这是一个关于angular+bootstrap的测试地址
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-horizontal" role="form" ng-controller="UserInfoCtrl">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">
+                                    邮箱：
+                                </label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" placeholder="推荐使用某某邮箱" ng-model="userInfo.email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">
+                                    密码：
+                                </label>
+                                <div class="col-md-10">
+                                    <input type="password" class="form-control" placeholder="只能是数字、字母和下划线" ng-model="userInfo.password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" ng-model="userInfo.autoLogin">自动登录
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
